@@ -18,15 +18,14 @@ import { BiLinkExternal } from "react-icons/bi";
 const ResumePreview = () => {
   const { theme, about, educationList, skills, workList, projects, printElem } =
     useResume();
-    const imgStyle = {
-      width:"115px",
-      height:"115px",
-     
-      margin:"15px",
+  const imgStyle = {
+    width: "115px",
+    height: "115px",
 
-      borderRadius: "50%",
-     
-    };
+    margin: "15px",
+
+    borderRadius: "50%",
+  };
   return (
     <>
       <Box
@@ -40,17 +39,12 @@ const ResumePreview = () => {
         <div ref={printElem}>
           <HStack>
             {about.picture && (
-              <img
-                style={imgStyle}
-                
-                src={about.picture}
-                alt="avatar"
-              />
+              <img style={imgStyle} src={about.picture} alt="avatar" />
             )}
 
             <VStack m={4} alignItems={"flex-start"} spacing={0.5}>
               <Heading as="h4" size="md">
-                {about.name ? about.name : "Jhon Doe"}
+                {about.name ? about.name : "Wasim khan"}
               </Heading>
               <Text color={"gray.500"}>
                 {about.role ? about.role : "Full Stack Web Developer"}
@@ -66,7 +60,7 @@ const ResumePreview = () => {
           >
             <HStack spacing={1}>
               <MdMail />{" "}
-              <Text>{about.email ? about.email : "jhondoe@gmail.com"}</Text>
+              <Text>{about.email ? about.email : "wasimkhan@gmail.com"}</Text>
             </HStack>
             <HStack spacing={1}>
               <MdLocalPhone />{" "}
@@ -74,7 +68,7 @@ const ResumePreview = () => {
             </HStack>
             <HStack spacing={1}>
               <MdLocationPin />{" "}
-              <Text>{about.address ? about.address : "Pune, MH"}</Text>
+              <Text>{about.address ? about.address : "Mumbai, MH"}</Text>
             </HStack>
             <HStack spacing={1}>
               <RiLinkedinBoxFill />{" "}
